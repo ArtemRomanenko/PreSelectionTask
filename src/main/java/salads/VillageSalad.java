@@ -1,5 +1,6 @@
 package salads;
 
+import exception.MyException;
 import vegetables.Vegetable;
 
 import java.util.List;
@@ -10,6 +11,14 @@ public class VillageSalad implements Salad {
 
     @Override
     public void makeASalad(List<Vegetable> vegetableList) {
+        if (vegetableList.isEmpty()) {
+            try {
+                throw new MyException("You don't have any vegetables. Please go to the market");
+            } catch (MyException e) {
+                e.printStackTrace();
+                System.exit(0);
+            }
+        }
         vegetableList.forEach(Vegetable::washingVegetables);
         vegetableList.forEach(Vegetable::cutVegetables);
     }
@@ -20,6 +29,14 @@ public class VillageSalad implements Salad {
                 .map(Vegetable::returnCalories)
                 .mapToInt(Integer::intValue)
                 .sum();
+        if (cal > 500) {
+            try {
+                throw new MyException("There is more than 500 cal. It's not a healthy salad");
+            } catch (MyException e) {
+                e.printStackTrace();
+                System.exit(0);
+            }
+        }
         System.out.println("Total calories of the salad = " + cal);
     }
 

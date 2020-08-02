@@ -20,4 +20,9 @@ public class Cucumber implements Vegetable {
     public boolean isPeeled() {
         return true;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Cucumber's calories = %s", calories);
+    }
 }
