@@ -1,5 +1,6 @@
 package kitchen;
 
+import recipe.RecipeSaver;
 import vegetables.*;
 import salads.Salad;
 import salads.VillageSalad;
@@ -20,5 +21,7 @@ public class PreparedSalad {
         salad.makeASalad(sortVega);
         salad.caloriesOfTheSalad(sortVega);
         System.out.println("Salad is ready");
+        new RecipeSaver().recipeStorage(sortVega.toString());
     }
+
 }

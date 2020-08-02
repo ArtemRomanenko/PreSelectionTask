@@ -20,4 +20,9 @@ public class Cabbage implements Vegetable {
     public boolean isPeeled() {
         return true;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Cabbage's calories = %s", calories);
+    }
 }
