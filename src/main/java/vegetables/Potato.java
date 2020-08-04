@@ -14,7 +14,7 @@ public class Potato implements Vegetable {
 
     @Override
     public int returnCalories() {
-        return new CaloriesReader().getPotatoCal();
+        return new CaloriesReader().reader().getPotato();
     }
 
     @Override
