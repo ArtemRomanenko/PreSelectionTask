@@ -14,7 +14,7 @@ public class Cucumber implements Vegetable {
 
     @Override
     public int returnCalories() {
-        return new CaloriesReader().getCucumberCal();
+        return new CaloriesReader().reader().getCucumber();
     }
 
     @Override

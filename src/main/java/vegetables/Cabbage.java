@@ -14,7 +14,7 @@ public class Cabbage implements Vegetable {
 
     @Override
     public int returnCalories() {
-        return new CaloriesReader().getCabbageCal();
+        return new CaloriesReader().reader().getCabbage();
     }
 
     @Override
