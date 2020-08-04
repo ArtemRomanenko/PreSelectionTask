@@ -6,9 +6,10 @@ import java.io.IOException;
 public class RecipeSaver {
     public void recipeStorage(String recipe) {
 
-        try (FileOutputStream fos = new FileOutputStream("/Users/macbook/Java_Projects/notes.txt")) {
+        try (FileOutputStream fos = new FileOutputStream
+                ("/Users/macbook/Java_Projects/notes.txt"))
+        {
             byte[] buffer = recipe.getBytes();
-
             fos.write(buffer, 0, buffer.length);
         } catch (IOException ex) {
 

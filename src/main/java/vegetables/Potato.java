@@ -1,7 +1,8 @@
 package vegetables;
 
+import reader.CaloriesReader;
+
 public class Potato implements Vegetable {
-    final private int calories = 50;
 
     public void washingVegetables() {
         System.out.println("Cabbage is washed");
@@ -13,7 +14,7 @@ public class Potato implements Vegetable {
 
     @Override
     public int returnCalories() {
-        return calories;
+        return new CaloriesReader().reader().getPotato();
     }
 
     @Override
@@ -23,6 +24,6 @@ public class Potato implements Vegetable {
 
     @Override
     public String toString() {
-        return String.format("Potato's calories = %s", calories);
+        return String.format("Potato's calories = %s", returnCalories());
     }
 }
